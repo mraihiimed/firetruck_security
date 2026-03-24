@@ -1,0 +1,6 @@
+#include "sec_log.h"
+#include <stdio.h>
+
+
+void sec_log_init()
+{}}

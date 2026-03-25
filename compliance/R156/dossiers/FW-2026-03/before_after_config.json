@@ -1,0 +1,20 @@
+{
+  "update_id": "FW-2026-03",
+  "ecu": "main_ecu",
+  "before": {
+    "version": "1.1.0",
+    "hash": "abc123",
+    "config": {
+      "gateway_rules": 42,
+      "state_machine_version": 3
+    }
+  },
+  "after": {
+    "version": "1.2.0",
+    "hash": "def456",
+    "config": {
+      "gateway_rules": 45,
+      "state_machine_version": 4
+    }
+  }
+}

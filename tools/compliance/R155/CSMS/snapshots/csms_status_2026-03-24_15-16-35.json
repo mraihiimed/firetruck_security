@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-24_15-16-35",
+  "csms_scope": {
+    "development": true,
+    "production": true,
+    "post_production": true
+  },
+  "processes": {
+    "risk_identification": true,
+    "risk_assessment": true,
+    "risk_treatment": true,
+    "verification": true,
+    "cybersecurity_testing": true,
+    "lifecycle_risk_maintenance": true
+  }
+}

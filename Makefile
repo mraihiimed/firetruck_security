@@ -69,3 +69,15 @@ $(BIN)/hmi_ecu: $(COMMON) $(HMI_ECU_SRC) | $(BIN)
 
 clean:
 	rm -rf $(BIN)
+
+# ============================================================
+# Authority Verification Package (AVP)
+# ============================================================
+
+AVP_SCRIPT := ./generate_authority_verification_package.sh
+
+.PHONY: avp
+avp:
+	@echo "Generating Authority Verification Package..."
+	@$(AVP_SCRIPT)
+	@echo "Done. Package available in ./authority_verification_package"

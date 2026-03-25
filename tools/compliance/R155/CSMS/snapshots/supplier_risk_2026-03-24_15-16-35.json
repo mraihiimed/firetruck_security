@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-03-24_15-16-35",
+  "suppliers": [
+    {
+      "name": "Internal Software Components",
+      "risk_level": "Low",
+      "status": "Verified"
+    },
+    {
+      "name": "Open-source libraries",
+      "risk_level": "Medium",
+      "status": "Monitored"
+    }
+  ]
+}

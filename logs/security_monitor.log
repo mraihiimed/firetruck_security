@@ -1,0 +1,34 @@
+Includes:
+- Timestamp
+- PGN
+- SA
+- Attack type
+- Decision
+
+## 3.3 Timely Mitigation (§7.2.2.3)
+Critical vulnerabilities patched within 30 days.
+
+## 3.4 Continual Monitoring (§7.2.2.4)
+Monitoring applies to:
+- Development vehicles
+- Production vehicles
+- Vehicles after registration
+
+---
+
+# 4. Supplier Management (§7.2.2.5)
+
+Supplier risks documented in:
+
+
+
+
+---
+
+# 8. Cryptography (§7.3.8)
+
+Updates protected using:
+- SHA256 hashing
+- RSA2048 signing
+
+Documented in:

@@ -1,7 +1,7 @@
 #ifndef STATE_MODEL_H
 #define STATE_MODEL_H
 
-#include "can_drv.h"
+#include "../common/can_drv.h"
 
 typedef enum {
     PTO_OFF = 0,

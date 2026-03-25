@@ -1,0 +1,14 @@
+{
+  "update_id": "FW-2026-03",
+  "timestamp": "2026-03-24T17:45:00Z",
+  "events": [
+    "CHECK_VEHICLE_STATE_OK",
+    "CHECK_POWER_OK",
+    "HASH_VERIFIED",
+    "SIGNATURE_VERIFIED",
+    "INSTALLATION_STARTED",
+    "INSTALLATION_SUCCESS",
+    "RXSWIN_UPDATED"
+  ],
+  "status": "SUCCESS"
+}

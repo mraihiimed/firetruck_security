@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "components": {
+    "main_ecu": {
+      "version": "1.0.0",
+      "hash": "SHA256:MAIN_ECU_HASH_PLACEHOLDER"
+    },
+    "gw_chassis": {
+      "version": "1.0.0",
+      "hash": "SHA256:GW_CHASSIS_HASH_PLACEHOLDER"
+    },
+    "gw_firecan": {
+      "version": "1.0.0",
+      "hash": "SHA256:GW_FIRECAN_HASH_PLACEHOLDER"
+    },
+    "gw_hmi": {
+      "version": "1.0.0",
+      "hash": "SHA256:GW_HMI_HASH_PLACEHOLDER"
+    }
+  }
+}

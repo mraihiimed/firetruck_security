@@ -1,1 +1,2 @@
-# Firetruck Security Platform — Security Monitoring Log
+Usage: security_monitor_simulator <attack>
+Attacks: spoof, dos, replay, firecan, hmi

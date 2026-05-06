@@ -1,0 +1,2 @@
+Usage: security_monitor_simulator <attack>
+Attacks: spoof, dos, replay, firecan, hmi

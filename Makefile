@@ -38,7 +38,13 @@ GW_HMI_SRC = gw_hmi/main.c \
 HMI_ECU_SRC = hmi_ecu/main.c \
               hmi_ecu/hmi_cmd.c
 
-# --- Build all ---
+# --- Security Monitor ---
+SEC_MON_SRC = tools/security_monitor_simulator.c
+
+# ============================================================
+# Build all binaries
+# ============================================================
+
 all: $(BIN)/attacker_node \
      $(BIN)/main_ecu \
      $(BIN)/gw_chassis \
@@ -68,39 +74,11 @@ $(BIN)/gw_hmi: $(COMMON) $(GW_HMI_SRC) | $(BIN)
 $(BIN)/hmi_ecu: $(COMMON) $(HMI_ECU_SRC) | $(BIN)
 	$(CC) $(CFLAGS) -o $@ $^
 
-# --- Security Monitor Simulator ---
-SEC_MON_SRC = tools/security_monitor_simulator.c
-
 $(BIN)/security_monitor: $(SEC_MON_SRC) | $(BIN)
 	$(CC) $(CFLAGS) -o $@ $^
 
-
 clean:
 	rm -rf $(BIN)
-
-# ============================================================
-# Authority Verification Package (AVP)
-# ============================================================
-
-AVP_SCRIPT := ./generate_authority_verification_package.sh
-
-.PHONY: avp
-avp:
-	@echo "Generating Authority Verification Package..."
-	@$(AVP_SCRIPT)
-	@echo "Done. Package available in ./authority_verification_package"
-
-# ============================================================
-# Monitoring Utilities
-# ============================================================
-
-.PHONY: monitor-clean
-monitor-clean:
-	@echo "Cleaning monitoring logs and snapshots..."
-	@rm -f logs/security_monitor.log
-	@rm -f compliance/R155/CSMS/snapshots/monitoring_auto.json
-	@echo "# Firetruck Security Platform — Security Monitoring Log" > logs/security_monitor.log
-	@echo "Monitoring cleaned."
 
 # ============================================================
 # Authority Verification Package (AVP)
@@ -117,7 +95,7 @@ avp:
 	@echo "Done. Package available in ./$(AVP_DIR)"
 
 # ------------------------------------------------------------
-# Create a ZIP archive of the AVP
+# Create ZIP archive
 # ------------------------------------------------------------
 .PHONY: avp-zip
 avp-zip: avp
@@ -127,7 +105,7 @@ avp-zip: avp
 	@echo "Created $(AVP_ZIP)"
 
 # ------------------------------------------------------------
-# Remove AVP directory and ZIP
+# Clean AVP artifacts
 # ------------------------------------------------------------
 .PHONY: avp-clean
 avp-clean:
@@ -136,7 +114,7 @@ avp-clean:
 	@echo "AVP cleaned."
 
 # ------------------------------------------------------------
-# Validate that required evidence files exist
+# Validate evidence files
 # ------------------------------------------------------------
 .PHONY: avp-validate
 avp-validate:
@@ -165,7 +143,7 @@ avp-validate:
     fi
 
 # ------------------------------------------------------------
-# Auto-detect latest update ID (future-proof)
+# Auto-detect latest update ID
 # ------------------------------------------------------------
 .PHONY: avp-latest
 avp-latest:

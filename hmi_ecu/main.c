@@ -22,8 +22,15 @@ int main(void)
     while (1) {
         int cmd;
         printf("Enter command: ");
-        scanf("%d", &cmd);
 
+        if(scanf("%d", &cmd) != 1)
+        {
+           printf("Invalid input\n");
+           /*Clear invalid input from stdin*/
+           int c;
+           while((c=getchar()) != '\n'&& c != EOF);
+           continue;
+        }
         switch (cmd) {
             case 1: hmi_send_pto(1); break;
             case 2: hmi_send_pto(0); break;
